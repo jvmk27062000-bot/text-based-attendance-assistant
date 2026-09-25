@@ -12,9 +12,6 @@ DB_PATH = BASE_DIR / "attendance.db"
 
 app = Flask(__name__)
 CORS(app)
-@app.get("/")
-def home():
-    return jsonify({"message": "Backend is live!", "status": "ok"})
 
 
 def get_db():
@@ -242,6 +239,12 @@ def health():
 @app.get("/api/students")
 def get_students():
     return jsonify(fetch_students())
+
+
+    @app.get("/")
+def home():
+    return {"message": "Backend is live!", "status": "ok"}
+
 
 
 @app.post("/api/students")

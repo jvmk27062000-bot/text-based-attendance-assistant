@@ -1,3 +1,4 @@
 Flask==3.1.2
 flask-cors==6.0.1
 rapidfuzz==3.13.0
+gunicorn app:app
